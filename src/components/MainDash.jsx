@@ -7,7 +7,7 @@ const MainDash = (props) => {
     const [userPosts, setuserPosts] = useState([])
     const fetchUserPosts = async () => {
         try {
-            const response = await fetch(`http://127.0.0.1:5000/userprofile/userposts/${props.user.userID}`);
+            const response = await fetch(`https://express-here.herokuapp.com/userprofile/userposts/${props.user.userID}`);
             const responseJson = await response.json();
             console.log(responseJson)
             setuserPosts(responseJson.data);
